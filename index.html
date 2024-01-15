@@ -1,14 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milling Parameters Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="calculator">
         <h2>Milling Parameters Calculator</h2>
+        <!-- <label for="toolMaterial">Tool Material:</label>
+        <select id="toolMaterial">
+            <option value="HSS">HSS (High-Speed Steel)</option>
+            <option value="Hartmetall">Hartmetall (Carbide)</option>
+        </select>
+        <label for="millingType">Milling Type:</label>
+        <select id="millingType">
+            <option value="Planfräsen">Eck- und Planfräsen mit Wendeschneidplatten</option>
+            <option value="Kontur_und_Eckfräsen">Kontur- und Eckfräsen</option>
+            <option value="Nutenfräsen">Nutenfräsen</option>
+        </select>
+        <select id="millingType">
+            <option value="Schruppen">Schruppen</option>
+            <option value="Schlichten">Schlichten</option>
+        </select> -->
+        <label for="material">Material:</label>
+        <select id="material">
+            <option value="S235JR">S235JR</option>
+            <option value="E295">E295</option>
+            <option value="E335">E335</option>
+            <option value="E360">E360</option>
+            <option value="11SMnPb30">11SMnPb30</option>
+            <option value="C15">C15</option>
+            <option value="16MnCr5">16MnCr5</option>
+            <option value="20MnCr5">20MnCr5</option>
+            <option value="18CrMo4">18CrMo4</option>
+            <option value="C35">C35</option>
+            <option value="C45">C45</option>
+            <option value="C60">C60</option>
+            <option value="42CrMo4">42CrMo4</option>
+            <option value="50CrV4">50CrV4</option>
+            <option value="34CrNiMo6">34CrNiMo6</option>
+            <option value="30CrNiMo8">30CrNiMo8</option>
+            <option value="X210CrW12">X210CrW12</option>
+            <option value="X155CrVMo12">X155CrVMo12</option>
+            <option value="100Cr6">100Cr6</option>
+            <option value="90MnCrV8">90MnCrV8</option>
+            <option value="GJL-150">GJL-150</option>
+            <option value="GJL-200">GJL-200</option>
+            <option value="GJL-400">GJL-400</option>
+            <option value="GJS-400">GJS-400</option>
+            <option value="GJS-600">GJS-600</option>
+            <option value="GJS-800">GJS-800</option>
+            <option value="AlCuMg1">AlCuMg1</option>
+            <option value="AlMg3">AlMg3</option>
+            <option value="AC-AlSi12">AC-AlSi12</option>
+            <option value="AC-AlMg9">AC-AlMg9</option>
+            <option value="MgAl8Zn">MgAl8Zn</option>
+            <option value="CuZn40Pb2">CuZn40Pb2</option>
+            <option value="CuSn7ZnPb">CuSn7ZnPb</option>
+            <option value="TiAl6V4">TiAl6V4</option>
+        </select>
         <label for="cutterDiameter">Cutter Diameter (mm):</label>
         <input type="number" id="cutterDiameter" placeholder="Enter Cutter Diameter">
 
@@ -24,15 +78,13 @@
         <label for="feedDepth">Feed Depth (mm):</label>
         <input type="number" id="feedDepth" placeholder="Enter Feed Depth">
 
-        <label for="specificCuttingForce">Specific Cutting Force (N/mm^2):</label>
-        <input type="number" id="specificCuttingForce" placeholder="Enter Specific Cutting Force">
-
         <label for="efficiency">Efficiency:</label>
         <input type="number" id="efficiency" placeholder="Enter Efficiency">
 
-        <button onclick="calculateParameters()">Calculate</button>
+        <button id="calculate-button">Calculate</button>
         <div id="result"></div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>
