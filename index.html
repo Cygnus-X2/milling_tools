@@ -10,22 +10,7 @@
 
 <body>
     <div class="calculator">
-        <h2>Milling Parameters Calculator</h2>
-        <!-- <label for="toolMaterial">Tool Material:</label>
-        <select id="toolMaterial">
-            <option value="HSS">HSS (High-Speed Steel)</option>
-            <option value="Hartmetall">Hartmetall (Carbide)</option>
-        </select>
-        <label for="millingType">Milling Type:</label>
-        <select id="millingType">
-            <option value="Planfräsen">Eck- und Planfräsen mit Wendeschneidplatten</option>
-            <option value="Kontur_und_Eckfräsen">Kontur- und Eckfräsen</option>
-            <option value="Nutenfräsen">Nutenfräsen</option>
-        </select>
-        <select id="millingType">
-            <option value="Schruppen">Schruppen</option>
-            <option value="Schlichten">Schlichten</option>
-        </select> -->
+        <h2>Milling Power Calculator V0.1</h2>
         <label for="material">Material:</label>
         <select id="material">
             <option value="S235JR">S235JR</option>
@@ -63,30 +48,38 @@
             <option value="CuSn7ZnPb">CuSn7ZnPb</option>
             <option value="TiAl6V4">TiAl6V4</option>
         </select>
-        <label for="cutterDiameter">Cutter Diameter (mm):</label>
-        <input type="number" id="cutterDiameter" placeholder="Enter Cutter Diameter">
-
-        <label for="amountTooth">Number of Teeth:</label>
-        <input type="number" id="amountTooth" placeholder="Enter Number of Teeth">
-
-        <label for="cuttingSpeed">Cutting Speed (m/min):</label>
-        <input type="number" id="cuttingSpeed" placeholder="Enter Cutting Speed">
-
-        <label for="feedPerTooth">Feed Per Tooth (mm):</label>
-        <input type="number" id="feedPerTooth" placeholder="Enter Feed Per Tooth">
-
-        <label for="feedDepth">Feed Depth (mm):</label>
-        <input type="number" id="feedDepth" placeholder="Enter Feed Depth">
-
-        <label for="feedWidth">Feed Width (mm):</label>
-        <input type="number" id="feedWidth" placeholder="Enter Feed Witdh">
-
-        <label for="efficiency">Efficiency:</label>
-        <input type="number" id="efficiency" placeholder="Enter Efficiency">
-
+        <div class="input-container">
+            <label for="cutterDiameter">Cutter Diameter(mm):</label>
+            <input type="number" id="cutterDiameter" placeholder="Enter Cutter Diameter">
+        </div>
+        <div class="input-container">
+            <label for="amountTooth">Number of Teeth:</label>
+            <input type="number" id="amountTooth" placeholder="Enter Number of Teeth">
+        </div>
+        <div class="input-container">
+            <label for="cuttingSpeed">Cutting Speed(m/min):</label>
+            <input type="number" id="cuttingSpeed" placeholder="Enter Cutting Speed">
+        </div>
+        <div class="input-container">
+            <label for="feedPerTooth">Feed Per Tooth(mm):</label>
+            <input type="number" id="feedPerTooth" placeholder="Enter Feed Per Tooth">
+        </div>
+        <div class="input-container">
+            <label for="feedDepth">Feed Depth(mm):</label>
+            <input type="number" id="feedDepth" placeholder="Enter Feed Depth">
+        </div>
+        <div class="input-container">
+            <label for="feedWidth">Feed Width(mm):</label>
+            <input type="number" id="feedWidth" placeholder="Enter Feed Witdh">
+        </div>
+        <div class="input-container">
+            <label for="efficiency">Efficiency:</label>
+            <input type="number" id="efficiency" placeholder="Enter Efficiency" value="0.8">
+        </div>
         <button id="calculate-button">Calculate</button>
         <div id="result"></div>
     </div>
+
     <script type="module" src="script.js"></script>
 </body>
 
