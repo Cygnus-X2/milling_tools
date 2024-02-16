@@ -33,16 +33,10 @@ export function calculateParameters() {
 
   // Display the result
   var resultText = `Spindle Speed: ${spindleSpeed.toFixed(2)} RPM<br>` +
+    `Feed Rate: ${feedRate.toFixed(2)} mm/min <br>` +
     `Material Removal Rate: ${materialRemovalRate.toFixed(2)} cm³/min<br>` +
-    `Middle Chip Thickness: ${middleChipThickness.toFixed(2)} mm<br>` +
-    `Specific Cutting Force: ${specificCuttingForceKc.toFixed(2)} N/mm^2<br>` +
     `Cutting Force: ${cuttingForce.toFixed(2)} N<br>` +
-    `Engagement Angle: ${(phi * (180 / Math.PI)).toFixed(2)} degrees<br>` + // Added line to display engagement angle in degrees
-    `Number of Effective Teeth: ${ze.toFixed(2)}<br>` + // Added line to display number of effective teeth
     `Milling Power: ${millingPower.toFixed(2)} W`;
-
-
-
   document.getElementById('result').innerHTML = resultText;
 }
 
