@@ -28,7 +28,7 @@ export function calculateParameters() {
   var amountTooth = document.getElementById('amountTooth').value; // Assuming you have this input in your HTML
   var ze = amountTooth * (phi / (2 * Math.PI));
   var millingPower = ze * cuttingForce * cuttingSpeed / 60 / efficiency;
-  var feedRate = spindleSpeed * feedPerTooth
+  var feedRate = spindleSpeed * feedPerTooth * amountTooth
   var materialRemovalRate = (feedRate * feedDepth * feedWidth) / 1000;
 
   // Display the result
